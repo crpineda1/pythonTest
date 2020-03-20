@@ -34,6 +34,4 @@ print("Your tax rate is ${} and tip rate is  is ${}".format(tax_rate,tip_rate))
 
 
 
-# test 1
-# test 2
-# test 3
+
