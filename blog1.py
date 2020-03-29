@@ -9,3 +9,6 @@ int integerr = 1
 float floatt = 2
 complex complexx = 1j
 
+# Sequence (like array)
+list listt = [1,2,3]
+tuple tuplee = (1,2,3)
