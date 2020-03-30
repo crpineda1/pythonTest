@@ -12,3 +12,7 @@ complex complexx = 1j
 # Sequence (like array)
 list listt = [1,2,3]
 tuple tuplee = (1,2,3)
+
+# Mapping
+dict dictionary = {name: "John", age: 30}
+
