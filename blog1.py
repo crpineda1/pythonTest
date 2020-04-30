@@ -91,4 +91,28 @@ len(countries) # 13 <- length function to count elements
 len(unique_countries) # 10 <- length function to count elements
 
 
+# for loops
+
+for country in countries:
+  print(country) # prints each country -> just JS for...in loop
+print("this is now outside of loop")
+
+countries = ['Croatia', 'USA', 'Argentina', 'France', 'Brazil', 'Japan', 'Vietnam', 'Israel']
+
+for index in [0,1,2,3,4,5,6,7]:
+  print(index)            # prints each number in array
+  print(countries[index]) # prints each country (numbers doubles as index)
+
+for x in range(len(countries)):    # range object creates list of numbers from 0(default & optional) to max-1 (same as indices for an array)
+  print (x,cities[x],countries[x]) # prints each based on range
+
+print(range(len(countries))) # prints array indices
+
+countries.append('mexico')
+cities.append('mexico city')
+
+for x in range(len(countries)):   # range updated to include mexico
+  print(x,cities[x],countries[x]) # prints including mexico
+
+
 
