@@ -116,6 +116,34 @@ for x in range(len(countries)):   # range updated to include mexico
 
 
 # iterate thru dictionary
+# python cannot interate direcly thru a dictionary so we need to convert it to a list
+
+example_dictionary = {'first_name': "Terrance", 'last_name': "KOAR", 'favorite_language': "Python"} 
+print(example_dictionary) # prints dictionary
+print(example_dictionary.items()) #creates list of sets of key,values pairs <- for interation
+
+for key,value in example_dictionary.items(): #creates list with all key/cvalue pairs so you can iterate
+  print (key,value)
+
+for key in example_dictionary.keys(): # creates list of keys 
+  print (key,example_dictionary[key])  # prints each key and value from dictionary
+
+
+# functions
+
+new_employees = ['steven', 'jan', 'meryl']
+
+def greet_employees(): # declare function with def (define?)
+  welcome_messages = []
+  for name in new_employees:
+    print name.title()
+    welcome_messages.append("Hi "+name.title()+"!")
+    print "last line inside for loop"
+  return welcome_messages # there is no "end" or closing brackets, function ends when you start new line in same line as "def"
+print "this line is outside the function but before execution"
+print greet_employees() #execute/call function 
+print "this line is outside the function and after execution"
+
 
 
 
