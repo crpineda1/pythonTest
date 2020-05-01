@@ -91,7 +91,7 @@ len(countries) # 13 <- length function to count elements
 len(unique_countries) # 10 <- length function to count elements
 
 
-# for loops
+# iterate thru loops
 
 for country in countries:
   print(country) # prints each country -> just JS for...in loop
@@ -113,6 +113,10 @@ cities.append('mexico city')
 
 for x in range(len(countries)):   # range updated to include mexico
   print(x,cities[x],countries[x]) # prints including mexico
+
+
+# iterate thru dictionary
+
 
 
 
