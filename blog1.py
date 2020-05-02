@@ -140,11 +140,8 @@ def greet_employees(): # declare function with def (define?)
     welcome_messages.append("Hi "+name.title()+"!")
     print "last line inside for loop"
   return welcome_messages # there is no "end" or closing brackets, function ends when you start new line in same line as "def"
-print "this line is outside the function but before execution"
+print ("this line is outside the function but before execution")
 print greet_employees() #execute/call function 
-print "this line is outside the function and after execution"
-
-
-
+print ("this line is outside the function and after execution")
 
 
