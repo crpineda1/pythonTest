@@ -29,7 +29,7 @@ word_histogram = dict.fromkeys(unique_words,0)
 
 list_of_lyrics = ['element1','element2','element3','element1','element2','element1']
 
-# for loop (for...in loop)
+# for loop (same as JS for...in loop)
 # hash map - increase word count in dict per occurence  
 for word in list_of_lyrics:
   word_histogram[word] = word_histogram[word] + 1
@@ -49,6 +49,9 @@ name.endswith('simpson') # true
 name.replace('o','0') # 'H0mer Simps0n'
 
 name[:3] # 'geo' -> slice # of characters (same with list)
+
+name.strip() # removes leading and trailing spaces (same as JS trim) or chaacters specified
+name.strip('hn') # returns "omer simpso" (leading h & trailing n removed)
 
 help(str) #more info on strings and methods (in terminal while running python engine)
 
@@ -195,4 +198,27 @@ def addSimpson(str):           # fucntion to modify elements
 
 print map(addSimpson,names) # returns ['Homer Simpson', 'Marge Simpson',...]
 print map(None,names) # returns unmodified list
+print map(list,names) # returns "listified" (split strings to lists) elements  (list of lists) e.g.: [['H', 'o', 'm', 'e', 'r'], ['M', 'a', 'r', 'g', 'e'],...]
 
+
+# lambda custom functions
+# when you need a quick & simple modification that doesn't need an formal function (similar to JS anonymous function () => {})
+
+numbers = [1, 3, 8, 9, 11, 20]
+
+def addfive(num):
+  return num + 5
+
+print map(addfive,numbers)
+print map(lambda x: x+5,numbers)
+
+from restaurants import yelp_restaurants   # import data from restaurants.py (adjacent file)
+
+restaurants = map(lambda restaurant: dict(name = restaurant["name"],          # create a list of restaurant objects (type dict) with only info we want
+                                          price = restaurant["price"], 
+                                          is_closed = restaurant["is_closed"], 
+                                          review_count = restaurant["review_count"]),
+                                          yelp_restaurants)                           # ref imported list from restaurants.py
+
+
+print restaurants  # prints new list of restaurants 
