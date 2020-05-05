@@ -151,13 +151,13 @@ print ("this line is outside the function and after execution")
 def minimumDistances(a):
   map = {}
   results = []
-  i = 0
+  i = 0                                 # must create i outside for...in loop
   for num in a:
     if str(num) in map:                 # check for existence
       results.append(i-map[str(num)])   # note: variable must be string to search in dict
     else:
       map[str(num)] = i
-    i += 1
+    i += 1                              # don't forget to increase i
   
   if len(results) > 0:
     return min(results)
