@@ -10,8 +10,9 @@ floatt = 2.1 # type float
 complexx = 1j # type complex
 
 # Sequence (list = JS array, tuple = JS set?)
-array = [1,2,3] #type list
-tuplee = (1,2,3) #type set (unique values only) 
+this_list = [1,2,3] #type list (ordered & changable)
+this_tuple = (1,2,3) #type tuple (ordered & UNCHANGEABLE) 
+this_set = (1,2,3) #type set (unique values only) 
 
 array[:2] # [1,2] slice # elements (NOT INDEX)
 
@@ -145,3 +146,26 @@ print greet_employees() #execute/call function
 print ("this line is outside the function and after execution")
 
 
+# function with logic
+
+def minimumDistances(a):
+  map = {}
+  results = []
+  i = 0
+  for num in a:
+    if str(num) in map:                 # check for existence
+      results.append(i-map[str(num)])   # note: variable must be string to search in dict
+    else:
+      map[str(num)] = i
+    i += 1
+  
+  if len(results) > 0:
+    return min(results)
+  else:
+    return -1
+
+print ("expect 3",minimumDistances([7,1,3,4,1,7]))
+print ("expect 1",minimumDistances([7,3,3,4,1,7]))
+print ("expect 5",minimumDistances([7,2,3,4,1,7]))
+print ("expect -1",minimumDistances([9,2,3,4,1,7]))
+print ("expect 2",minimumDistances([7,4,3,4,1,7]))
