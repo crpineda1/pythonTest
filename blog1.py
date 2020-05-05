@@ -170,18 +170,29 @@ print ("expect 5",minimumDistances([7,2,3,4,1,7]))
 print ("expect -1",minimumDistances([9,2,3,4,1,7]))
 print ("expect 2",minimumDistances([7,4,3,4,1,7]))
 
-# filter -> takes filtering function and iterable object (list, etc)
-# filter ( function, iterable ) -> returns list function with items that match condition 
+# filter -> applies filtering function to each element in iterable object (list, etc)
+# filter ( function, iterable ) -> returns list with elements that match condition 
 
 numbers = [0,1,2,3,4,5]
 
-def above3(n):
+def above3(n):  # filter function
   if n>3:
     return True
   else:
     return False
 
 filter(above3,numbers) # returns [4,5]
+filter(None,numbers) # returns only truthy values e.g.:[1,2,3,4,5]
 
-filter(None,numbers) # returns all truthy values e.g.:[1,2,3,4,5]
+
+# map -> applied function to modify each element iterable object
+# map(Function, Sequence) -> returns same size list with modified elements
+
+names = ['Homer', 'Marge', 'Bart', 'Maggie', 'Lisa']
+
+def addSimpson(str):           # fucntion to modify elements 
+  return str + " Simpson"
+
+print map(addSimpson,names) # returns ['Homer Simpson', 'Marge Simpson',...]
+print map(None,names) # returns unmodified list
 
