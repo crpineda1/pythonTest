@@ -161,11 +161,7 @@ def minimumDistances(a):
     else:
       map[str(num)] = i
     i += 1                              # don't forget to increase i
-  
-  if len(results) > 0:
-    return min(results)
-  else:
-    return -1
+  return -1 if len(results) == 0 else min(results) # ternary <result 1><if condition><result 2/else>
 
 print ("expect 3",minimumDistances([7,1,3,4,1,7]))
 print ("expect 1",minimumDistances([7,3,3,4,1,7]))
