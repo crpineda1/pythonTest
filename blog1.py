@@ -14,9 +14,13 @@ num = 1j # type complex
 type(num) # <class 'complex'>
 
 # Sequence (list = JS array, tuple = JS set?)
-this_list = [1,2,3] #type list (ordered & changable)
-this_tuple = (1,2,3) #type tuple (ordered & UNCHANGEABLE) 
-this_set = (1,2,3) #type set (unique values only) 
+this_list = [4,1,2,3] #type list (ordered/indexed & changable)
+type(this_list) # return <class 'list'>
+this_tuple = (4,1,2,3) #type tuple (ordered/indexed & UNchangable) 
+type(this_tuple) # return <class 'tuple'>
+this_set = {1,2,3} #type set (unique values only) 
+this_set # return {1, 2, 3, 4}
+
 
 array[:2] # [1,2] slice # elements (NOT INDEX)
 
