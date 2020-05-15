@@ -1,6 +1,7 @@
-# data types
+# Python Basics
 
 # String
+
 sentence = 'Hi i am a string'
 type(sentence) # return <class 'str'>
 
@@ -13,13 +14,32 @@ type(num) # return <class 'float'>
 num = 1j # type complex
 type(num) # <class 'complex'>
 
-# Sequence (list = JS array, tuple = JS set?)
-this_list = [4,1,2,3] #type list (ordered/indexed & changable)
+# Boolean
+
+boolean = True # type boolean
+type(boolean) # return <class 'bool'>
+
+bool(100) # returns True
+bool(0) # returns False
+
+# Empty Variables (None type)
+var = None
+type(var) # return <class 'NoneType'>
+
+
+# Collections (list = JS array, tuple = JS set?)
+
+this_list = [1,2,3] #type list (ordered/indexed & changable)
 type(this_list) # return <class 'list'>
-this_tuple = (4,1,2,3) #type tuple (ordered/indexed & UNchangable) 
+this_tuple = (1,2,3) #type tuple (ordered/indexed & UNchangable) 
 type(this_tuple) # return <class 'tuple'>
 this_set = {1,2,3} #type set (unique values only) 
 this_set # return {1, 2, 3, 4}
+
+list2 = [4,1,2,3,3]
+tuple(this_list) # return (4,1,2,3,3)
+set(this_list) # return {1,2,3,4}
+list(set(this_list)) # return [1,2,3,4]
 
 
 array[:2] # [1,2] slice # elements (NOT INDEX)
@@ -63,17 +83,6 @@ name.strip('hn') # returns "omer simpso" (leading h & trailing n removed)
 
 help(str) #more info on strings and methods (in terminal while running python engine)
 
-# numbers
-
-type(10) # int
-type(10.2) #float
-
-# booleans
-print bool(100) # True
-print bool(0)   # False
-
-# assign empty variable
-address = None
 
 # lists
 
