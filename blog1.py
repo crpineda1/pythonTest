@@ -2,12 +2,16 @@
 
 # String
 sentence = 'Hi i am a string'
+type(sentence) # return <class 'str'>
 
 # Numeric
 
-numberrr = 1 # type int
-floatt = 2.1 # type float
-complexx = 1j # type complex
+num = 1 # type int
+type(num) # return <class 'int'>
+num = 2.1 # type float
+type(num) # return <class 'float'>
+num = 1j # type complex
+type(num) # <class 'complex'>
 
 # Sequence (list = JS array, tuple = JS set?)
 this_list = [1,2,3] #type list (ordered & changable)
