@@ -1,5 +1,6 @@
 # Python Basics
 
+
 # String
 
 sentence = 'Hi i am a string'
@@ -27,6 +28,7 @@ var = None
 type(var) # return <class 'NoneType'>
 
 
+
 # Collections (list = JS array, tuple = JS set?)
 
 this_list = [1,2,3] #type list (ordered/indexed & changable)
@@ -34,12 +36,12 @@ type(this_list) # return <class 'list'>
 this_tuple = (1,2,3) #type tuple (ordered/indexed & UNchangable) 
 type(this_tuple) # return <class 'tuple'>
 this_set = {1,2,3} #type set (unique values only) 
-this_set # return {1, 2, 3, 4}
+type(this_set) # return <class 'set'>
 
-list2 = [4,1,2,3,3]
-tuple(this_list) # return (4,1,2,3,3)
-set(this_list) # return {1,2,3,4}
-list(set(this_list)) # return [1,2,3,4]
+collection = [4,1,2,3,3]
+tuple(collection) # return (4,1,2,3,3)
+set(collection) # return {1,2,3,4}
+list(set(collection)) # return [1,2,3,4]
 
 
 array[:2] # [1,2] slice # elements (NOT INDEX)
@@ -49,11 +51,13 @@ dictionary = {"name": "John", "age": 30} #type dict
 
 
 # setup dict from array with keys for dict
-# notice dict.fromkeys() is not camelcase 🤔  
-
+# notice dict.fromkeys() - methods not camelcase 🤔
+ 
+this_list = [4, 1, 2, 3, 3]
+dict.fromkeys(this_list) # returns {4: None, 1: None, 2: None, 3: None}
 
 unique_words = ['element1','element2','element3']
-word_histogram = dict.fromkeys(unique_words,0)
+word_histogram = dict.fromkeys(unique_words,0) # return {'element1': 0, 'element2': 0, 'element3': 0}
 
 list_of_lyrics = ['element1','element2','element3','element1','element2','element1']
 
