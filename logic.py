@@ -49,12 +49,65 @@ for x,y in list_of_tups: # tuple unpacking (for output of other data stuctures)
   # print(y)
   print('\n')
 
-  d = {'a':1,'b':2,'c':3}
-  for key,value in d.items():
-    print('dict key ', key)
-    print('dict value ', value)
+d = {'a':1,'b':2,'c':3}
+for key,value in d.items():
+  print('dict key ', key)
+  print('dict value ', value)
 
-  for k in d:
-    print('key', k)
-    print('value',d[k])
+for k in d:
+  print('key', k)
+  print('value',d[k])
+
+for num in range(0,11,2): # range of #s (start,non-inclusive end, skip)
+  print(num) 
+
+print(list(range(0,11))) # prints list of nums
+
+index = 0
+for letter in 'abcde':
+  print('At index {} the letter is {}'.format(index,letter))
+  index += 1
+
+for index,letter in enumerate('abcde'): # assigns an index to string/list/etc
+  print('At index {} the letter is {}'.format(index,letter))
+
+mylist1 = [1,2,3,4,5]
+mylist2 = ['a','b','c','d','e']
+
+for item in zip(mylist1,mylist2): #creates tuple of pairs of both lists (like a zipper)
+  print(item)
+
+print(3 in [1,2,4])
+print(2 in (1,2,3))
+print('a' in {'a':1,'b':2})
+print(1 in {'a':1,'b':2})
+
+from random import shuffle
+
+
+
+mylist = [1,2,'c','e']
+print(mylist)
+shuffle(mylist) # in place shuffle items in list
+print(mylist)
+shuffle(mylist)
+print(mylist)
+shuffle(mylist)
+print(mylist)
+
+from random import randint
+randint(0,100) # generates random int 0-99
+print(randint(0,100))
+print(randint(0,100))
+print(randint(0,100))
+print(randint(0,100))
+print(randint(0,100))
+print(randint(0,100))
+
+print( 1 == 1 and 2 == 2)
+print( 1 == 1 or 2 == 2)
+print( 1 != 1 and 2 != 2)
+print( 1 != 1 or 2 != 3)
+
+
 
